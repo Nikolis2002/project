@@ -264,7 +264,7 @@ public class Menu
                             break;
 
                         case 22:
-                        System.out.print("Μπορείτε να διαγράψετε την παροχή(y-διαγραφή,n-καμία αλλαγή,4-πίσω : ");
+                        System.out.print("Μπορείτε να διαγράψετε την παροχή(y-διαγραφή,n-καμία αλλαγή,4-πίσω) : ");
                         answer=MenuHelper.checkString("y","n","4");
                         if(answer.equals("y"))
                         {
@@ -281,7 +281,7 @@ public class Menu
                             break;
                         
                         case 23:
-                        System.out.print("Μπορείτε να τροποποιήσετε την ποσότητα(y-τροποποίηση,n-καμία αλλαγή,4-πίσω: ");
+                        System.out.print("Μπορείτε να τροποποιήσετε την ποσότητα(y-τροποποίηση,n-καμία αλλαγή,4-πίσω) : ");
                         answer=MenuHelper.checkString("y","n","4");
                         if(answer.equals("y"))
                         {
@@ -298,7 +298,7 @@ public class Menu
                             break;
                         
                         case 24:
-                        System.out.print("Μπορείτε να διαγράψετε όλες τις δωρεές σας(y-διαγραφή,n-καμία αλλαγή,4)-πίσω : ");
+                        System.out.print("Μπορείτε να διαγράψετε όλες τις δωρεές σας(y-διαγραφή,n-καμία αλλαγή,4-πίσω) : ");
                         answer=MenuHelper.checkString("y","n","4");
                         if(answer.equals("y"))
                         {
@@ -605,7 +605,7 @@ public class Menu
                             break;
 
                         case 22:
-                        System.out.print("Μπορείτε να διαγράψετε την παροχή(y-διαγραφή,n-καμία αλλαγή,4-πίσω : ");
+                        System.out.print("Μπορείτε να διαγράψετε την παροχή(y-διαγραφή,n-καμία αλλαγή,4-πίσω) : ");
                         answer=MenuHelper.checkString("y","n","4");
                         if(answer.equals("y"))
                         {
@@ -622,7 +622,7 @@ public class Menu
                             break;
                         
                         case 23:
-                        System.out.print("Μπορείτε να τροποποιήσετε την πόσοτητα(y-τροποποίηση,n-καμία αλλαγή,4-πίσω : ");
+                        System.out.print("Μπορείτε να τροποποιήσετε την πόσοτητα(y-τροποποίηση,n-καμία αλλαγή,4-πίσω) : ");
                         answer=MenuHelper.checkString("y","n","4");
                         if(answer.equals("y"))
                         {
@@ -645,7 +645,7 @@ public class Menu
                             break;
                         
                         case 24:
-                        System.out.print("Μπορείτε να διαγράψετε όλες τις αιτήσεις σας(y-διαγραφή,n-καμία αλλαγή,4-πίσω : ");
+                        System.out.print("Μπορείτε να διαγράψετε όλες τις αιτήσεις σας(y-διαγραφή,n-καμία αλλαγή,4-πίσω) : ");
                         answer=MenuHelper.checkString("y","n","4");
                         if(answer.equals("y"))
                         {
@@ -660,7 +660,7 @@ public class Menu
                             break;
 
                         case 25:
-                        System.out.print("Μπορείτε να καταχωρήσετε όλες τις αιτήσεις σας πατώντας y η πατήστε 4 για πίσω : ");
+                        System.out.print("Μπορείτε να καταχωρήσετε όλες τις αιτήσεις σας πατώντας y η πατήστε 4 για πίσω) : ");
                         answer=MenuHelper.checkString("y","n","4");
                         if(answer.equals("y"))
                         {
