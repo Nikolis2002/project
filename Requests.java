@@ -51,17 +51,17 @@ public class Requests extends RequestDonationList
     {
         boolean flag=false;
         if(!validRequestDonation(j,quantity))
-                throw new TooMuchException("Η ποσότητα που ζητάς μαζί με αυτά που έχεις ζητήσει ξεπερνά το όριο!");
+                throw new TooMuchException("Η ποσότητα που ζητάς μαζί με αυτά που έχεις ζητήσει ξεπερνά το όριο!"); //elegxw to deytero validRequestDonation
         else
         {
             for(var x: Organization.getOrg().returnCurDon().returnOrder())
             {    
                     double y=x.getQuantity()-get(j).getQuantity();
-                if(get(j).exists(x)&&(x.getQuantity()>0)&&y>=0)  //elegxw to deytero validRequestDonation
+                if(get(j).exists(x)&&(x.getQuantity()>0)&&y>=0)  
                     {
                         flag=true;
                         super.modify(j,quantity);  
-                        break; //kanoume break an epiteuxthei allagei gia teliwsei to pogramma
+                        break; //kanoume break an epiteuxthei allagh gia na teliwsei to pogramma
                     }
 
             }
@@ -71,7 +71,7 @@ public class Requests extends RequestDonationList
      
     } 
 
-    public boolean validRequestDonation(RequestDonation r,boolean flag) //bazw flag giati analoga an trexw panw sto requestList h oxi,prepei na kanw diaforetiko elgxo
+    public boolean validRequestDonation(RequestDonation r,boolean flag) //bazw flag giati analoga an trexw panw sto requestList h oxi,prepei na kanw diaforetiko eelgxo
     {
         boolean exist=b.returnRecievList().requestExists(r.getEntDon().getID());  //elegxoume na yparxei sto requestList alla kai sto receivedList gia na sygkrinoume osa exei parei
         boolean exists2=b.returnRequestList().requestExists(r.getEntDon().getID()); //me to epitrepomeno orio
@@ -98,7 +98,7 @@ public class Requests extends RequestDonationList
 
     public boolean validRequestDonation(int j,double quantity) 
     {
-        boolean exist=b.returnRecievList().requestExists(j); //kanw mono sto recievedList gt tropopoiw thn posothta sto request ara den eexei nohma na kanw kai sta 2
+        boolean exist=b.returnRecievList().requestExists(j); //kanw mono sto recievedList gt tropopoiw thn posothta sto request ara den exei nohma na kanw kai sta 2
         double sum;
         if(get(j).getEntDon().getISmaterial()==true)
         {
