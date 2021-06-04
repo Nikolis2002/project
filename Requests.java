@@ -116,7 +116,6 @@ public class Requests extends RequestDonationList
     {
         ArrayList<Integer> served=new ArrayList<Integer>();
         boolean flag=false;
-        Iterator<RequestDonation> it=  Organization.getOrg().returnCurDon().returnOrder().iterator();
         for(var x:returnOrder())
         {    
            
@@ -124,6 +123,7 @@ public class Requests extends RequestDonationList
                 throw new TooMuchException("Η ποσότητα που ζητάς μαζί με αυτά που έχεις ζητήσει ξεπερνά το όριο!");
                
                 else{  //elegxw an to antikeimeno yparxei stocurrentDonations
+                    Iterator<RequestDonation> it=  Organization.getOrg().returnCurDon().returnOrder().iterator();
                         while(it.hasNext())
                         {
                             RequestDonation y=it.next();
