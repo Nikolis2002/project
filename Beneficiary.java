@@ -22,7 +22,7 @@ public class Beneficiary extends User
         this.noPersons=noPersons;
     } 
 
-    public boolean benefExists(Beneficiary B) //elegxei an yparxei o Benficiary
+    public boolean benefExists(Beneficiary B) //elegxei an yparxei o Beneficiary
     {
         if(this.getPhone().equals(B.getPhone()))
             return true;
