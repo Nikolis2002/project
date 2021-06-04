@@ -200,7 +200,7 @@ public class Menu
                         if(!don.returnOfferList().returnOrder().isEmpty())
                         {
                             don.monitorOffers();
-                            System.out.println("1)Επιλογή παροχής"+'\n'+"2)Καθαρισμός όλων των παροχών."+'\n'+"3)Καταχώρηση δωρεάς"+'\n'+"4)Επιστροφή");
+                            System.out.print("1)Επιλογή παροχής"+'\n'+"2)Καθαρισμός όλων των παροχών."+'\n'+"3)Καταχώρηση δωρεάς"+'\n'+"4)Επιστροφή : ");
                             
                             
                             do
@@ -241,13 +241,13 @@ public class Menu
                         don.monitorOffers();
                         do
                         {
-                            System.out.print("Δώστε το id του Offer που θέλετε να τροποποιήσετε.");
+                            System.out.print("Δώστε το id του Offer που θέλετε να τροποποιήσετε: ");
                             answer2=MenuHelper.scanInt(); 
                             System.out.println("");
                             r=don.getOffer(answer2);
                         }while(r==null);
                         System.out.println("Οι πληροφορίες της παροχής που επιλέξατε: "+r.getInfo());
-                        System.out.println("1)Διαγραφή παροχής με 1"+"\n"+"2)Τροποποιήση ποσότητας παροχής με 2"+"\n"+"3) 4 για πίσω");
+                        System.out.print("1)Διαγραφή παροχής με 1"+"\n"+"2)Τροποποιήση ποσότητας παροχής με 2"+"\n"+"3) 4 για πίσω: ");
                         answer2=MenuHelper.scanInt();
 
                         if(answer2==1)
@@ -264,7 +264,7 @@ public class Menu
                             break;
 
                         case 22:
-                        System.out.print("Μπορείτε να διαγράψετε την παροχή(y-διαγραφή,n-καμία αλλαγή,4-πίσω): ");
+                        System.out.print("Μπορείτε να διαγράψετε την παροχή(y-διαγραφή,n-καμία αλλαγή,4-πίσω : ");
                         answer=MenuHelper.checkString("y","n","4");
                         if(answer.equals("y"))
                         {
@@ -281,7 +281,7 @@ public class Menu
                             break;
                         
                         case 23:
-                        System.out.print("Μπορείτε να τροποποιήσετε την ποσότητα(y-τροποποίηση,n-καμία αλλαγή,4-πίσω): ");
+                        System.out.print("Μπορείτε να τροποποιήσετε την ποσότητα(y-τροποποίηση,n-καμία αλλαγή,4-πίσω: ");
                         answer=MenuHelper.checkString("y","n","4");
                         if(answer.equals("y"))
                         {
@@ -298,7 +298,7 @@ public class Menu
                             break;
                         
                         case 24:
-                        System.out.print("Μπορείτε να διαγράψετε όλες τις δωρεές σας(y-διαγραφή,n-καμία αλλαγή,4-πίσω): ");
+                        System.out.print("Μπορείτε να διαγράψετε όλες τις δωρεές σας(y-διαγραφή,n-καμία αλλαγή,4)-πίσω : ");
                         answer=MenuHelper.checkString("y","n","4");
                         if(answer.equals("y"))
                         {
@@ -543,7 +543,7 @@ public class Menu
                         if(!benef.returnRequestList().returnOrder().isEmpty())
                         {
                             benef.seeRequests();
-                            System.out.println("1)Επιλογή παροχής"+'\n'+"2)Καθαρισμός όλων των παροχών."+'\n'+"3)Καταχώρηση αίτησης"+'\n'+"4)Επιστροφή");
+                            System.out.print("1)Επιλογή παροχής"+'\n'+"2)Καθαρισμός όλων των παροχών."+'\n'+"3)Καταχώρηση αίτησης"+'\n'+"4)Επιστροφή : ");
                             
                             do
                             {
@@ -588,7 +588,7 @@ public class Menu
                             r=benef.returnRequest(answer2);
                         }while(r==null);
                         System.out.println("Οι πληροφορίες της παροχής που επιλέξατε: "+r.getInfo());
-                        System.out.println("1)Διαγραφή παροχής με 1"+"\n"+"2)Τροποποιήση ποσότητας παροχής με 2"+"\n"+"3) 4 για πίσω");
+                        System.out.print("1)Διαγραφή παροχής με 1"+"\n"+"2)Τροποποιήση ποσότητας παροχής με 2"+"\n"+"3)4 για πίσω : ");
                         answer2=MenuHelper.scanInt();
 
                         if(answer2==1)
@@ -605,7 +605,7 @@ public class Menu
                             break;
 
                         case 22:
-                        System.out.print("Μπορείτε να διαγράψετε την παροχή(y-διαγραφή,n-καμία αλλαγή,4-πίσω): ");
+                        System.out.print("Μπορείτε να διαγράψετε την παροχή(y-διαγραφή,n-καμία αλλαγή,4-πίσω : ");
                         answer=MenuHelper.checkString("y","n","4");
                         if(answer.equals("y"))
                         {
@@ -622,7 +622,7 @@ public class Menu
                             break;
                         
                         case 23:
-                        System.out.print("Μπορείτε να τροποποιήσετε την πόσοτητα(y-τροποποίηση,n-καμία αλλαγή,4-πίσω): ");
+                        System.out.print("Μπορείτε να τροποποιήσετε την πόσοτητα(y-τροποποίηση,n-καμία αλλαγή,4-πίσω : ");
                         answer=MenuHelper.checkString("y","n","4");
                         if(answer.equals("y"))
                         {
@@ -645,7 +645,7 @@ public class Menu
                             break;
                         
                         case 24:
-                        System.out.print("Μπορείτε να διαγράψετε όλες τις αιτήσεις σας(y-διαγραφή,n-καμία αλλαγή,4-πίσω): ");
+                        System.out.print("Μπορείτε να διαγράψετε όλες τις αιτήσεις σας(y-διαγραφή,n-καμία αλλαγή,4-πίσω : ");
                         answer=MenuHelper.checkString("y","n","4");
                         if(answer.equals("y"))
                         {
@@ -660,7 +660,7 @@ public class Menu
                             break;
 
                         case 25:
-                        System.out.print("Μπορείτε να καταχωρήσετε όλες τις αιτήσεις σας πατώντας y η πατήστε 4 για πίσω: ");
+                        System.out.print("Μπορείτε να καταχωρήσετε όλες τις αιτήσεις σας πατώντας y η πατήστε 4 για πίσω : ");
                         answer=MenuHelper.checkString("y","n","4");
                         if(answer.equals("y"))
                         {
