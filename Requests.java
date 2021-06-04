@@ -51,7 +51,8 @@ public class Requests extends RequestDonationList
     {
         for(var x: Organization.getOrg().returnCurDon().returnOrder())
         {    
-             if(get(j).exists(x)&&(x.getQuantity()>0)&&validRequestDonation(j,quantity))  //elegxw to deytero validRequestDonation
+                double y=x.getQuantity()-get(j).getQuantity();
+             if(get(j).exists(x)&&(x.getQuantity()>0)&&y>=0&&validRequestDonation(j,quantity))  //elegxw to deytero validRequestDonation
                 {
                     super.modify(j,quantity);  
                     break; //kanoume break an epiteuxthei allagei gia teliwsei to pogramma
@@ -123,7 +124,7 @@ public class Requests extends RequestDonationList
                 throw new TooMuchException("Η ποσότητα που ζητάς μαζί με αυτά που έχεις ζητήσει ξεπερνά το όριο!");
                
                 else{  //elegxw an to antikeimeno yparxei stocurrentDonations
-                    Iterator<RequestDonation> it=  Organization.getOrg().returnCurDon().returnOrder().iterator();
+                    Iterator<RequestDonation> it=  Organization.getOrg().returnCurDon().returnOrder().iterator(); 
                         while(it.hasNext())
                         {
                             RequestDonation y=it.next();
