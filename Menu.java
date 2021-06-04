@@ -285,7 +285,7 @@ public class Menu
                         answer=MenuHelper.checkString("y","n","4");
                         if(answer.equals("y"))
                         {
-                        System.out.println("Δώσε την ποσότητα");
+                        System.out.print("Δώσε την ποσότητα: ");
                             double quantity=MenuHelper.scanDouble();
                             r.setQuantity(quantity); //allazw to quantity
                             selection=0;
@@ -626,7 +626,7 @@ public class Menu
                         answer=MenuHelper.checkString("y","n","4");
                         if(answer.equals("y"))
                         {
-                        System.out.print("Δώσε την ποσότητα");
+                        System.out.print("Δώσε την ποσότητα: ");
                         double quantity=MenuHelper.scanDouble();
                             try {
                                 benef.modifyRequest(r.getEntDon().getID(), quantity);
