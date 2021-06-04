@@ -5,7 +5,7 @@ public class Main
             try{
         Menu m=new Menu();
         Admin admin= new Admin("Nick", "6980612790");
-         Organization org= new  Organization("Kourtakhs",admin);
+         Organization org= new  Organization("ceid",admin);
         Material sugar= new Material("sugar","yummy",10,100,200,300);
         Material milk= new Material("milk","good",11,400,500,600);
         Material rice= new Material("rice","carbs",12,200,300,350);
