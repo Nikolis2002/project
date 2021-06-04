@@ -49,19 +49,24 @@ public class Requests extends RequestDonationList
     @Override
     public void modify(int j,double quantity) throws notInStockException,TooMuchException
     {
-        for(var x: Organization.getOrg().returnCurDon().returnOrder())
-        {    
-                double y=x.getQuantity()-get(j).getQuantity();
-             if(get(j).exists(x)&&(x.getQuantity()>0)&&y>=0&&validRequestDonation(j,quantity))  //elegxw to deytero validRequestDonation
-                {
-                    super.modify(j,quantity);  
-                    break; //kanoume break an epiteuxthei allagei gia teliwsei to pogramma
-                }
-
-            if(x.getQuantity()<=0)
-                throw new notInStockException("Το αντικείμενο που ζητάτε έχει τελειώσει.");
-            if(!validRequestDonation(j,quantity))
+        boolean flag=false;
+        if(!validRequestDonation(j,quantity))
                 throw new TooMuchException("Η ποσότητα που ζητάς μαζί με αυτά που έχεις ζητήσει ξεπερνά το όριο!");
+        else
+        {
+            for(var x: Organization.getOrg().returnCurDon().returnOrder())
+            {    
+                    double y=x.getQuantity()-get(j).getQuantity();
+                if(get(j).exists(x)&&(x.getQuantity()>0)&&y>=0)  //elegxw to deytero validRequestDonation
+                    {
+                        flag=true;
+                        super.modify(j,quantity);  
+                        break; //kanoume break an epiteuxthei allagei gia teliwsei to pogramma
+                    }
+
+            }
+                if(!flag) //!flag=!y.exists(x)||!(x.getQuantity()>0)||!(y>=0) logw Demorgan
+                    throw new notInStockException("Το αντικείμενο που ζητάτε έχει τελειώσει.");
         }
      
     } 
