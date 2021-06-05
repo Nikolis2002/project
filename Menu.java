@@ -73,7 +73,7 @@ public class Menu
                         case 1:
                     
                           Organization.getOrg().listEntitiesAndQuantity();
-                        System.out.print("Θέλετε να επιλεξέτε μία κατηγορία απο τις 2; Αν ναι δώστε το όνομα της κατηγορίας αλλιώς πατήστε 4 για να πάτε πίσω: "); 
+                        System.out.print("Θέλετε να επιλεξέτε μία κατηγορία απο τις 2; Αν ναι δώστε το όνομα της κατηγορίας(input:Materials-Services) αλλιώς πατήστε 4 για να πάτε πίσω: "); 
 
                         answer=MenuHelper.checkString("Materials","Services","4");
                         System.out.println("");
@@ -411,7 +411,7 @@ public class Menu
                         case 1:
                     
                           Organization.getOrg().listEntitiesAndQuantity();
-                        System.out.print("Θέλετε να επιλεξέτε μία κατηγορία απο τις 2; Αν ναι δώστε το όνομα της κατηγορίας αλλιώς πατήστε 4 για να πάτε πίσω: "); 
+                        System.out.print("Θέλετε να επιλεξέτε μία κατηγορία απο τις 2; Αν ναι δώστε το όνομα της κατηγορίας(input:Materials-Services) αλλιώς πατήστε 4 για να πάτε πίσω: "); 
 
                         answer=MenuHelper.checkString("Materials","Services","4");
                         System.out.println("");
@@ -765,7 +765,7 @@ public void menuAdmin() throws InterruptedException
     
         case 1:
               Organization.getOrg().listEntitiesAndQuantity();
-            System.out.print("Θέλετε να επιλεξέτε μία κατηγορία απο τις 2; Αν ναι δώστε το όνομα της κατηγορίας αλλιώς πατήστε 3 για να πάτε πίσω: ");
+            System.out.print("Θέλετε να επιλεξέτε μία κατηγορία απο τις 2; Αν ναι δώστε το όνομα της κατηγορίας(input:Materials-Services) αλλιώς πατήστε 3 για να πάτε πίσω: ");
             answer=MenuHelper.checkString("Materials","Services","3");
             System.out.println("");
             if(answer.equals("Materials"))
