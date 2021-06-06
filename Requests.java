@@ -56,7 +56,7 @@ public class Requests extends RequestDonationList
         {
             for(var x: Organization.getOrg().returnCurDon().returnOrder())
             {    
-                    double y=x.getQuantity()-get(j).getQuantity();
+                    double y=x.getQuantity()-quantity;
                 if(get(j).exists(x)&&(x.getQuantity()>0)&&y>=0)  
                     {
                         flag=true;
